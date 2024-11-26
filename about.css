@@ -1,0 +1,204 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('mountain.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed; 
+    height: 100vh;
+    scroll-behavior: smooth; 
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.903); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #8450A0; /* Primary color */
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #8450A0; /* Background on hover */
+    color: white; /* Change text color */
+    transform: scale(1.1); /* Slight zoom */
+    box-shadow: 0 0 10px #8450A0, 0 0 20px #F0BED2; /* Glow effect */
+    transform: translateY(-2px);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust based on padding */
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #8450A0, #F0BED2);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+nav a.active {
+    background: linear-gradient(to right, #8450A0, #F0BED2);
+    color: white;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+.know {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.know h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.about {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, rgba(130, 80, 120, 1), rgba(240, 190, 210, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: black;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:90px;
+  }
+  
+  .container .glass {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1.3s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+  }
+  
+  .container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+ 
+  .container ul{
+    color:white;
+    font-size: 25px;
+    line-height: 2em;
+  }
+
+  .download-section {
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.3); 
+    padding:20px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #8450A0; 
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #A064C4; 
+    transform: translateY(-2px); 
+}
+
+.glow-effect {
+    box-shadow: 0 0 20px 20px rgb(255, 255, 255);
+    animation: glow-animation 5s ease-out forwards;
+}
+
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 20px 20px rgb(255, 255, 255);
+    }
+    100% {
+        box-shadow: none;
+    }
+}
