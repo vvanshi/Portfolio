@@ -14,9 +14,9 @@ body {
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.903); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Blur effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background: rgba(255, 255, 255, 0.903);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     position: sticky;
     top: 0;
     z-index: 10;
@@ -201,4 +201,8 @@ nav a.active {
     100% {
         box-shadow: none;
     }
+}
+
+ul{
+    
 }
