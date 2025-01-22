@@ -34,8 +34,8 @@ body {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100px;
-  width: 250px;
+  height: 80px;
+  width: 200px;
   border-radius: 10px;
   color: white;
   cursor: pointer;
@@ -278,6 +278,9 @@ body {
   top: 23px;
   right: 23px;
   transition-delay: 1.2s;
+  text-align: center;
+  padding-top:30px;
+  color:white;
 }
 
 .logo .circle5 {
@@ -323,7 +326,7 @@ body {
 
 
 .tree-container {
- margin-top: 40px;
+ margin-top: 0px;
 }
 @keyframes bounce {
   0%,
