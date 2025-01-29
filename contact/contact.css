@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    color: #333;
+}
+
+.video-background {
+    position: fixed; /* Fixed position for parallax effect */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: brightness(90%); /* Adjust brightness for readability */
+}
+
+nav {
+    background-color: rgb(255, 255, 255,0.7); /* Fully transparent navbar */
+    color: purple;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    position: sticky; /* Sticks to the top while scrolling */
+    top: 0;
+    z-index: 10; /* Above the video */
+}
+
+nav a {
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: purple;
+    transition: color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a:hover {
+    color: #8450A0;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    background: transparent; /* Fully transparent background */
+}
+
+.contact-container {
+    background: white;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: none; /* Remove box-shadow for a cleaner look */
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    color: #5f086c; /* Make text white for better visibility */
+}
+
+/* Title and Info */
+.contact-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #51096b; /* Text color for better readability */
+}
+
+.contact-info {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #84158a;
+}
+
+/* Form Styling */
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2); /* Slight transparency for input fields */
+    color: #000; /* Text inside input fields remains visible */
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #8450A0;
+    box-shadow: 0 0 5px rgba(132, 80, 160, 0.5);
+}
+
+/* Submit Button */
+.submit-btn {
+    padding: 12px 30px;
+    background: #8450A0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #a064c4;
+    box-shadow: 0 4px 10px rgba(132, 80, 160, 0.3);
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #621065; /* Make social link text white */
+}
+
+.social-links a {
+    color: #32054b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-links i{
+    padding:5px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #bcbcbc; /* Footer text color */
+}
